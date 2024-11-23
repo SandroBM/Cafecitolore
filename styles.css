@@ -1,0 +1,425 @@
+/* Variables globales */
+:root {
+    --primary-color: #5D4037;
+    --secondary-color: #8D6E63;
+    --accent-color: #D7CCC8;
+    --text-dark: #263238;
+    --text-light: #FFFFFF;
+    --transition: all 0.3s ease-in-out;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Salmon', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Navbar personalizado */
+.navbar {
+    background-color: var(--primary-color) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--text-light);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* Carousel mejoras */
+.carousel {
+    margin-bottom: 2rem;
+}
+
+.carousel-item {
+    height: 600px;
+    background-color: var(--secondary-color);
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 2rem;
+    bottom: 3rem;
+}
+
+.carousel-caption h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+/* Cards de productos */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+}
+
+.card-img-top {
+    border-radius: 15px 15px 0 0;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-title {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Botones personalizados */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+/* Sección de testimonios */
+#testimonios {
+    background-color: var(--accent-color);
+}
+
+#testimonios .card {
+    background-color: var(--text-light);
+    margin: 1rem 0;
+}
+
+.blockquote-footer {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+/* Call to Action */
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+/* Footer */
+footer h5 {
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--accent-color) !important;
+    transform: scale(1.2);
+}
+
+/* Página Nosotros */
+header.bg-dark {
+    background-color: var(--primary-color) !important;
+    padding: 4rem 0;
+}
+
+.img-fluid {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Iconos en cards de valores */
+.card .fas {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 400px;
+    }
+
+    .carousel-caption {
+        padding: 1rem;
+        bottom: 1rem;
+    }
+
+    .carousel-caption h2 {
+        font-size: 1.8rem;
+    }
+
+    .card-img-top {
+        height: 200px;
+    }
+
+    header.bg-dark {
+        padding: 2rem 0;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card, .img-fluid, .btn {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Mejoras de accesibilidad */
+.nav-link:focus,
+.btn:focus {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--accent-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+ /*página Nosotros */
+ .about-hero {
+    height: 60vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://solnatural.bio/views/img/recipesphotos/215.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-light);
+    margin-top: 76px;
+}
+/* Hero Section */
+.about-hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.about-hero-content p {
+    font-size: 1.5rem;
+}
+
+/* Historia Section */
+.about-story {
+    overflow: hidden;
+}
+
+
+
+.about-image {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.about-image img {
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+.about-content {
+    padding: 30px;
+}
+
+.about-content h2 {
+    margin-bottom: 25px;
+    color: var(--primary-color);
+}
+
+.about-content p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Valores Section */
+.value-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: var(--transition);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    height: 100%;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.value-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+}
+
+.value-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.value-card h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+/* Equipo Section */
+.team-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    transition: var(--transition);
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.team-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.team-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.team-card:hover .team-image img {
+    transform: scale(1.05);
+}
+
+.team-info {
+    padding: 25px;
+    text-align: center;
+}
+
+.team-info h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.team-info p {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.team-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.team-social a {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.team-social a:hover {
+    color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .about-hero {
+        height: 50vh;
+    }
+
+    .about-content {
+        padding: 30px 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .value-card {
+        margin-bottom: 30px;
+    }
+
+    .team-image img {
+        height: 300px;
+    }
+}
+
+
